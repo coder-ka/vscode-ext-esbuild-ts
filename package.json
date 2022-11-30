@@ -1,0 +1,41 @@
+{
+  "name": "helloworld-minimal-sample",
+  "version": "1.0.0",
+  "description": "Minimal HelloWorld example for VS Code",
+  "main": "dist/index.js",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.helloWorld"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --external:vscode --outfile=dist/index.js",
+    "watch": "npm run build -- --watch",
+    "start": "node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coder-ka/esbuild-ts-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coder-ka/esbuild-ts-node/issues"
+  },
+  "homepage": "https://github.com/coder-ka/esbuild-ts-node#readme",
+  "devDependencies": {
+    "@types/vscode": "^1.32.0",
+    "@types/node": "^18.11.9",
+    "esbuild": "^0.15.15"
+  }
+}
