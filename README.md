@@ -29,3 +29,7 @@ Then press `Ctrl+R` (reload window) to apply code change.
 ### Contribution Points
 
 - [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
+
+## Publishing to marketplace
+
+See [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).

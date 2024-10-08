@@ -1,8 +1,12 @@
 {
-  "name": "helloworld-minimal-sample",
+  "name": "helloworld-minimal-example",
   "version": "1.0.0",
   "description": "Minimal HelloWorld example for VS Code",
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "engines": {
     "vscode": "^1.32.0"
   },
@@ -20,22 +24,26 @@
   "scripts": {
     "build": "esbuild src/main.ts --bundle --platform=node --external:vscode --outfile=dist/index.js",
     "watch": "npm run build -- --watch",
-    "start": "node dist"
+    "start": "node dist",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
+  "publisher": "your-vscode-marketplace-publisher-name",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coder-ka/esbuild-ts-node.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "your-github-username",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/coder-ka/esbuild-ts-node/issues"
   },
   "homepage": "https://github.com/coder-ka/esbuild-ts-node#readme",
   "devDependencies": {
-    "@types/vscode": "^1.32.0",
     "@types/node": "^18.11.9",
+    "@types/vscode": "^1.32.0",
+    "@vscode/vsce": "^3.1.1",
     "esbuild": "^0.15.15"
   }
 }
